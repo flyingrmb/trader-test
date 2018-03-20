@@ -8,5 +8,4 @@ import org.springframework.data.repository.CrudRepository;
 public @interface MockData {
     String file();
     Class<? extends CrudRepository> repository();
-    // Class<?> entity();
 }
