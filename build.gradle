@@ -1,19 +1,10 @@
-plugins {
-    id 'org.springframework.boot' version '2.0.0.RELEASE'
-}
-
 group 'org.actech.smart'
 version '1.0.0'
 
 apply plugin: 'java'
-apply plugin: 'io.spring.dependency-management'
 
-bootJar {
-    mainClassName = 'org.actech.smart.trader.Application'
-}
 
 repositories {
-    // maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     jcenter()
 }
 
@@ -37,11 +28,11 @@ dependencies {
     compile group: 'org.springframework', name: 'spring-test', version: '5.0.4.RELEASE'
 
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
-    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
     // https://mvnrepository.com/artifact/org.springframework.data/spring-data-keyvalue
-    testCompile group: 'org.springframework.data', name: 'spring-data-keyvalue', version: '2.0.5.RELEASE'
+    compile group: 'org.springframework.data', name: 'spring-data-keyvalue', version: '2.0.5.RELEASE'
     // https://mvnrepository.com/artifact/de.flapdoodle.embed/de.flapdoodle.embed.mongo
-    testCompile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.0.3'
+    compile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.0.3'
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-test
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-test', version: '2.0.0.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-test', version: '2.0.0.RELEASE'
 }
