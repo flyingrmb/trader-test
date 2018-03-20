@@ -1,0 +1,47 @@
+plugins {
+    id 'org.springframework.boot' version '2.0.0.RELEASE'
+}
+
+group 'org.actech.smart'
+version '1.0.0'
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+    mainClassName = 'org.actech.smart.trader.Application'
+}
+
+repositories {
+    // maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    jcenter()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb
+    compile group: 'org.springframework.data', name: 'spring-data-mongodb', version: '2.0.5.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.0.RELEASE'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
+
+    // jsoup HTML service library @ https://jsoup.org/
+    compile 'org.jsoup:jsoup:1.11.2'
+    // https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit
+    compile group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.29'
+    // https://mvnrepository.com/artifact/com.cedarsoftware/java-util
+    compile group: 'com.cedarsoftware', name: 'java-util', version: '1.34.0'
+
+    compile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/org.springframework/spring-test
+    compile group: 'org.springframework', name: 'spring-test', version: '5.0.4.RELEASE'
+
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-keyvalue
+    testCompile group: 'org.springframework.data', name: 'spring-data-keyvalue', version: '2.0.5.RELEASE'
+    // https://mvnrepository.com/artifact/de.flapdoodle.embed/de.flapdoodle.embed.mongo
+    testCompile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.0.3'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-test
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-test', version: '2.0.0.RELEASE'
+}
