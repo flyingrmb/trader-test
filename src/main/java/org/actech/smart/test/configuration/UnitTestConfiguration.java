@@ -1,4 +1,4 @@
-package org.actech.smart.trader.configuration;
+package org.actech.smart.test.configuration;
 
 import com.mongodb.MongoClient;
 import de.flapdoodle.embed.mongo.MongodExecutable;
